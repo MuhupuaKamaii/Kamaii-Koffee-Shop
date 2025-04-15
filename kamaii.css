@@ -1,0 +1,170 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+header {
+    position: relative; /* Allows header to be above the video */
+    background: rgba(255, 255, 255, 0.7); /* Optional: semi-transparent header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header .logo img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.coffee {
+    transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    padding: 15px; /* Add padding for better visual appearance */
+}
+
+.coffee:hover {
+    transform: scale(1.1);
+    cursor: pointer; /* Added cursor pointer */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* places video behind the rest of the content */
+}
+header, footer { /* Apply to header and footer */
+    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+footer img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+.map{
+    width: 100%;
+}
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+.coffee {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.coffee img {
+    width: 150px; /* Adjust image size */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.coffee h3 {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #ddd; /* Light border */
+}
+
+footer .contact-us img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+/* Add some responsive adjustments */
+@media (max-width: 768px) {
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+.coffee-cup svg path:nth-child(n+2) { /* Select steam paths */
+    animation: steam 2s linear infinite;
+  }
+  
+  @keyframes steam {
+    0% {
+      transform: translateY(0);
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+  }
